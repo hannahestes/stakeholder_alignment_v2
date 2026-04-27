@@ -1,0 +1,900 @@
+{
+  "total": 50,
+  "trees": [
+    {
+      "run": 1,
+      "accuracy": 65,
+      "train_accuracy": 68,
+      "overfitting_gap": 3,
+      "complexity": 3,
+      "tree_depth": 4,
+      "coverage": 68,
+      "stability": 57.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  22   win:   14     if Avg_Utilization_Ratio > 0\nn:  11   win:   39     |  if Avg_Utilization_Ratio <= 0.135\nn:   6   win:   54     |  |  if Avg_Utilization_Ratio <= 0.057\nn:   3   win:   56     |  |  |  if marital_Status != Single;\nn:   3   win:   53     |  |  |  if marital_Status == Single;\nn:   5   win:   21     |  |  if Avg_Utilization_Ratio > 0.057;\nn:  11   win:  -10     |  if Avg_Utilization_Ratio > 0.135\nn:   5   win:   -6     |  |  if CLIENTNUM <= 714744783;\nn:   6   win:  -13     |  |  if CLIENTNUM > 714744783\nn:   3   win:  -11     |  |  |  if marital_Status == Married;\nn:   3   win:  -15     |  |  |  if marital_Status != Married;\nn:   8   win:  -29     if Avg_Utilization_Ratio <= 0\nn:   3   win:  -17     |  if CLIENTNUM > 751607058;\nn:   5   win:  -37     |  if CLIENTNUM <= 751607058;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM marital_Status\nBest train: 68 hold-out: 65\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "marital_Status"
+      ]
+    },
+    {
+      "run": 2,
+      "accuracy": 50,
+      "train_accuracy": 64,
+      "overfitting_gap": 14,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 64,
+      "stability": 42.8,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:   9   win:   45     if Total_Trans_Amt > 7422\nn:   5   win:   63     |  if Avg_Utilization_Ratio <= 0.133;\nn:   4   win:   21     |  if Avg_Utilization_Ratio > 0.133;\nn:  21   win:    7     if Total_Trans_Amt <= 7422\nn:  11   win:   23     |  if CLIENTNUM <= 717846108\nn:   5   win:   38     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99981;\nn:   6   win:   11     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99981\nn:   3   win:   27     |  |  |  if education_Level != Graduate;\nn:   3   win:   -5     |  |  |  if education_Level == Graduate;\nn:  10   win:   -9     |  if CLIENTNUM > 717846108\nn:   5   win:    3     |  |  if Avg_Utilization_Ratio > 0.144;\nn:   5   win:  -22     |  |  if Avg_Utilization_Ratio <= 0.144;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM education_Level Total_Trans_Amt Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 64 hold-out: 50\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "education_Level",
+        "Total_Trans_Amt",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 3,
+      "accuracy": 63,
+      "train_accuracy": 67,
+      "overfitting_gap": 4,
+      "complexity": 6,
+      "tree_depth": 5,
+      "coverage": 104,
+      "stability": 37.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  18   win:   62     if Months_on_book > 35\nn:  14   win:   73     |  if Avg_Utilization_Ratio <= 0.097\nn:   9   win:   83     |  |  if Months_on_book <= 40\nn:   6   win:   93     |  |  |  if CLIENTNUM <= 770560683\nn:   3   win:  104     |  |  |  |  if education_Level == High School;\nn:   3   win:   83     |  |  |  |  if education_Level != High School;\nn:   3   win:   63     |  |  |  if CLIENTNUM > 770560683;\nn:   5   win:   54     |  |  if Months_on_book > 40;\nn:   4   win:   23     |  if Avg_Utilization_Ratio > 0.097;\nn:  12   win:   13     if Months_on_book <= 35\nn:   6   win:   27     |  if Total_Trans_Amt > 4878\nn:   3   win:   36     |  |  if education_Level == Graduate;\nn:   3   win:   19     |  |  if education_Level != Graduate;\nn:   6   win:   -1     |  if Total_Trans_Amt <= 4878\nn:   3   win:    2     |  |  if gender == F;\nn:   3   win:   -5     |  |  if gender != F;\n\nUsed:  education_Level Months_on_book CLIENTNUM gender Total_Trans_Amt Avg_Utilization_Ratio\nBest train: 67 hold-out: 63\n",
+      "features": [
+        "education_Level",
+        "Months_on_book",
+        "CLIENTNUM",
+        "gender",
+        "Total_Trans_Amt",
+        "Avg_Utilization_Ratio"
+      ]
+    },
+    {
+      "run": 4,
+      "accuracy": 56,
+      "train_accuracy": 73,
+      "overfitting_gap": 17,
+      "complexity": 6,
+      "tree_depth": 4,
+      "coverage": 73,
+      "stability": 46.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  25   win:   11     if Total_Amt_Chng_Q4_Q1 > 0.558\nn:  14   win:   14     |  if Avg_Utilization_Ratio <= 0.188\nn:   5   win:   43     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00018665;\nn:   9   win:   -1     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00018665\nn:   5   win:   16     |  |  |  if CLIENTNUM <= 720853158;\nn:   4   win:  -24     |  |  |  if CLIENTNUM > 720853158;\nn:  11   win:    8     |  if Avg_Utilization_Ratio > 0.188\nn:   7   win:   12     |  |  if Total_Trans_Ct <= 69\nn:   3   win:   19     |  |  |  if Customer_Age > 43;\nn:   4   win:    7     |  |  |  if Customer_Age <= 43;\nn:   4   win:    1     |  |  if Total_Trans_Ct > 69;\nn:   5   win:  -17     if Total_Amt_Chng_Q4_Q1 <= 0.558;\n\nUsed:  CLIENTNUM Customer_Age Total_Amt_Chng_Q4_Q1 Total_Trans_Ct Avg_Utilization_Ratio Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 73 hold-out: 56\n",
+      "features": [
+        "CLIENTNUM",
+        "Customer_Age",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Ct",
+        "Avg_Utilization_Ratio",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 5,
+      "accuracy": 71,
+      "train_accuracy": 58,
+      "overfitting_gap": -13,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 58,
+      "stability": 43.6,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  17   win:   17     if Avg_Utilization_Ratio <= 0.154\nn:  10   win:   36     |  if Avg_Utilization_Ratio > 0\nn:   4   win:   53     |  |  if Customer_Age > 47;\nn:   6   win:   25     |  |  if Customer_Age <= 47\nn:   3   win:   32     |  |  |  if education_Level != Unknown;\nn:   3   win:   19     |  |  |  if education_Level == Unknown;\nn:   7   win:   -9     |  if Avg_Utilization_Ratio <= 0\nn:   4   win:    1     |  |  if Contacts_Count_12_mon <= 2;\nn:   3   win:  -22     |  |  if Contacts_Count_12_mon > 2;\nn:  13   win:  -11     if Avg_Utilization_Ratio > 0.154\nn:   6   win:   -4     |  if Customer_Age <= 42;\nn:   7   win:  -16     |  if Customer_Age > 42\nn:   4   win:  -12     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.75;\nn:   3   win:  -21     |  |  if Total_Amt_Chng_Q4_Q1 > 0.75;\n\nUsed:  Customer_Age Avg_Utilization_Ratio education_Level Contacts_Count_12_mon Total_Amt_Chng_Q4_Q1\nBest train: 58 hold-out: 71\n",
+      "features": [
+        "Customer_Age",
+        "Avg_Utilization_Ratio",
+        "education_Level",
+        "Contacts_Count_12_mon",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 6,
+      "accuracy": 40,
+      "train_accuracy": 60,
+      "overfitting_gap": 20,
+      "complexity": 6,
+      "tree_depth": 4,
+      "coverage": 60,
+      "stability": 38.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  19   win:   25     if Avg_Utilization_Ratio <= 0.208\nn:  12   win:   42     |  if Avg_Utilization_Ratio > 0\nn:   9   win:   50     |  |  if Total_Trans_Ct <= 84\nn:   5   win:   60     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.9998;\nn:   4   win:   38     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.9998;\nn:   3   win:   17     |  |  if Total_Trans_Ct > 84;\nn:   7   win:   -3     |  if Avg_Utilization_Ratio <= 0\nn:   4   win:    8     |  |  if Total_Relationship_Count <= 3;\nn:   3   win:  -19     |  |  if Total_Relationship_Count > 3;\nn:  11   win:   -1     if Avg_Utilization_Ratio > 0.208\nn:   6   win:    5     |  if Customer_Age > 48\nn:   3   win:    6     |  |  if marital_Status == Married;\nn:   3   win:    3     |  |  if marital_Status != Married;\nn:   5   win:   -9     |  if Customer_Age <= 48;\n\nUsed:  Avg_Utilization_Ratio Customer_Age marital_Status Total_Relationship_Count Total_Trans_Ct Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 60 hold-out: 40\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "marital_Status",
+        "Total_Relationship_Count",
+        "Total_Trans_Ct",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 7,
+      "accuracy": 43,
+      "train_accuracy": 68,
+      "overfitting_gap": 25,
+      "complexity": 5,
+      "tree_depth": 5,
+      "coverage": 68,
+      "stability": 39.2,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  21   win:   18     if Avg_Utilization_Ratio > 0\nn:   6   win:   53     |  if Avg_Utilization_Ratio <= 0.197\nn:   3   win:   57     |  |  if attrition_Flag == Attrited Customer;\nn:   3   win:   48     |  |  if attrition_Flag != Attrited Customer;\nn:  15   win:    5     |  if Avg_Utilization_Ratio > 0.197\nn:  11   win:    9     |  |  if Total_Amt_Chng_Q4_Q1 > 0.578\nn:   5   win:   15     |  |  |  if Contacts_Count_12_mon <= 2;\nn:   6   win:    5     |  |  |  if Contacts_Count_12_mon > 2\nn:   3   win:    5     |  |  |  |  if marital_Status != Single;\nn:   3   win:    4     |  |  |  |  if marital_Status == Single;\nn:   4   win:   -7     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.578;\nn:   9   win:  -17     if Avg_Utilization_Ratio <= 0\nn:   5   win:  -15     |  if Total_Amt_Chng_Q4_Q1 <= 0.769;\nn:   4   win:  -21     |  if Total_Amt_Chng_Q4_Q1 > 0.769;\n\nUsed:  Total_Amt_Chng_Q4_Q1 Avg_Utilization_Ratio attrition_Flag marital_Status Contacts_Count_12_mon\nBest train: 68 hold-out: 43\n",
+      "features": [
+        "Total_Amt_Chng_Q4_Q1",
+        "Avg_Utilization_Ratio",
+        "attrition_Flag",
+        "marital_Status",
+        "Contacts_Count_12_mon"
+      ]
+    },
+    {
+      "run": 8,
+      "accuracy": 75,
+      "train_accuracy": 68,
+      "overfitting_gap": -7,
+      "complexity": 5,
+      "tree_depth": 5,
+      "coverage": 93,
+      "stability": 50.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  19   win:   47     if Avg_Utilization_Ratio <= 0.185\nn:  14   win:   68     |  if Avg_Utilization_Ratio > 0\nn:  11   win:   78     |  |  if Avg_Utilization_Ratio <= 0.101\nn:   4   win:   93     |  |  |  if Total_Trans_Amt <= 1843;\nn:   7   win:   69     |  |  |  if Total_Trans_Amt > 1843\nn:   4   win:   78     |  |  |  |  if CLIENTNUM <= 715957233;\nn:   3   win:   58     |  |  |  |  if CLIENTNUM > 715957233;\nn:   3   win:   32     |  |  if Avg_Utilization_Ratio > 0.101;\nn:   5   win:   -9     |  if Avg_Utilization_Ratio <= 0;\nn:  11   win:    2     if Avg_Utilization_Ratio > 0.185\nn:   7   win:    8     |  if Total_Amt_Chng_Q4_Q1 > 0.715\nn:   4   win:   12     |  |  if Total_Trans_Ct <= 70;\nn:   3   win:    3     |  |  if Total_Trans_Ct > 70;\nn:   4   win:   -9     |  if Total_Amt_Chng_Q4_Q1 <= 0.715;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM Total_Amt_Chng_Q4_Q1 Total_Trans_Amt Total_Trans_Ct\nBest train: 68 hold-out: 75\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Amt",
+        "Total_Trans_Ct"
+      ]
+    },
+    {
+      "run": 9,
+      "accuracy": 69,
+      "train_accuracy": 70,
+      "overfitting_gap": 1,
+      "complexity": 5,
+      "tree_depth": 5,
+      "coverage": 92,
+      "stability": 40.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  26   win:   37     if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99947\nn:  21   win:   45     |  if Avg_Utilization_Ratio <= 0.262\nn:  15   win:   61     |  |  if Avg_Utilization_Ratio > 0\nn:   7   win:   76     |  |  |  if Avg_Utilization_Ratio <= 0.071\nn:   3   win:   92     |  |  |  |  if CLIENTNUM > 713916708;\nn:   4   win:   64     |  |  |  |  if CLIENTNUM <= 713916708;\nn:   8   win:   48     |  |  |  if Avg_Utilization_Ratio > 0.071\nn:   4   win:   59     |  |  |  |  if Total_Trans_Ct <= 76;\nn:   4   win:   37     |  |  |  |  if Total_Trans_Ct > 76;\nn:   6   win:    4     |  |  if Avg_Utilization_Ratio <= 0\nn:   3   win:   27     |  |  |  if income_Category != Less than $40K;\nn:   3   win:  -18     |  |  |  if income_Category == Less than $40K;\nn:   5   win:    5     |  if Avg_Utilization_Ratio > 0.262;\nn:   4   win:  -16     if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99947;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM income_Category Total_Trans_Ct Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 70 hold-out: 69\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "income_Category",
+        "Total_Trans_Ct",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 10,
+      "accuracy": 64,
+      "train_accuracy": 70,
+      "overfitting_gap": 6,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 106,
+      "stability": 38.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  19   win:   40     if Avg_Utilization_Ratio <= 0.159\nn:  11   win:   72     |  if Avg_Utilization_Ratio > 0\nn:   5   win:  106     |  |  if Avg_Utilization_Ratio <= 0.059;\nn:   6   win:   43     |  |  if Avg_Utilization_Ratio > 0.059\nn:   3   win:   50     |  |  |  if gender != M;\nn:   3   win:   35     |  |  |  if gender == M;\nn:   8   win:   -3     |  if Avg_Utilization_Ratio <= 0\nn:   3   win:   20     |  |  if Customer_Age > 47;\nn:   5   win:  -17     |  |  if Customer_Age <= 47;\nn:  11   win:   14     if Avg_Utilization_Ratio > 0.159\nn:   4   win:   24     |  if Dependent_count <= 1;\nn:   7   win:    9     |  if Dependent_count > 1\nn:   3   win:   14     |  |  if Contacts_Count_12_mon > 3;\nn:   4   win:    5     |  |  if Contacts_Count_12_mon <= 3;\n\nUsed:  Avg_Utilization_Ratio Customer_Age gender Dependent_count Contacts_Count_12_mon\nBest train: 70 hold-out: 64\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "gender",
+        "Dependent_count",
+        "Contacts_Count_12_mon"
+      ]
+    },
+    {
+      "run": 11,
+      "accuracy": 55,
+      "train_accuracy": 74,
+      "overfitting_gap": 19,
+      "complexity": 5,
+      "tree_depth": 5,
+      "coverage": 103,
+      "stability": 39.6,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:   7   win:   81     if Total_Trans_Amt > 13142\nn:   4   win:  103     |  if Avg_Utilization_Ratio <= 0.085;\nn:   3   win:   51     |  if Avg_Utilization_Ratio > 0.085;\nn:  23   win:   19     if Total_Trans_Amt <= 13142\nn:  19   win:   28     |  if Avg_Utilization_Ratio > 0\nn:  10   win:   50     |  |  if Avg_Utilization_Ratio <= 0.221\nn:   5   win:   63     |  |  |  if Customer_Age > 50;\nn:   5   win:   37     |  |  |  if Customer_Age <= 50;\nn:   9   win:    4     |  |  if Avg_Utilization_Ratio > 0.221\nn:   6   win:    9     |  |  |  if Months_on_book <= 47\nn:   3   win:   10     |  |  |  |  if gender == M;\nn:   3   win:    9     |  |  |  |  if gender != M;\nn:   3   win:   -5     |  |  |  if Months_on_book > 47;\nn:   4   win:  -22     |  if Avg_Utilization_Ratio <= 0;\n\nUsed:  Avg_Utilization_Ratio Customer_Age gender Months_on_book Total_Trans_Amt\nBest train: 74 hold-out: 55\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "gender",
+        "Months_on_book",
+        "Total_Trans_Amt"
+      ]
+    },
+    {
+      "run": 12,
+      "accuracy": 73,
+      "train_accuracy": 71,
+      "overfitting_gap": -2,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 71,
+      "stability": 45.6,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  22   win:   27     if Avg_Utilization_Ratio > 0\nn:  14   win:   47     |  if Avg_Utilization_Ratio <= 0.162\nn:   9   win:   61     |  |  if Total_Amt_Chng_Q4_Q1 > 0.692\nn:   4   win:   71     |  |  |  if Months_on_book > 34;\nn:   5   win:   53     |  |  |  if Months_on_book <= 34;\nn:   5   win:   23     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.692;\nn:   8   win:   -7     |  if Avg_Utilization_Ratio > 0.162\nn:   4   win:   -2     |  |  if Total_Trans_Amt <= 4531;\nn:   4   win:  -11     |  |  if Total_Trans_Amt > 4531;\nn:   8   win:  -11     if Avg_Utilization_Ratio <= 0\nn:   4   win:   -5     |  if Customer_Age <= 46;\nn:   4   win:  -18     |  if Customer_Age > 46;\n\nUsed:  Avg_Utilization_Ratio Customer_Age Months_on_book Total_Amt_Chng_Q4_Q1 Total_Trans_Amt\nBest train: 71 hold-out: 73\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "Months_on_book",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Amt"
+      ]
+    },
+    {
+      "run": 13,
+      "accuracy": 64,
+      "train_accuracy": 70,
+      "overfitting_gap": 6,
+      "complexity": 6,
+      "tree_depth": 5,
+      "coverage": 93,
+      "stability": 38.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  19   win:   51     if Avg_Utilization_Ratio <= 0.145\nn:  15   win:   66     |  if Avg_Utilization_Ratio > 0\nn:  10   win:   79     |  |  if Customer_Age <= 48\nn:   6   win:   90     |  |  |  if Total_Amt_Chng_Q4_Q1 > 0.68\nn:   3   win:   93     |  |  |  |  if education_Level == Uneducated;\nn:   3   win:   87     |  |  |  |  if education_Level != Uneducated;\nn:   4   win:   62     |  |  |  if Total_Amt_Chng_Q4_Q1 <= 0.68;\nn:   5   win:   40     |  |  if Customer_Age > 48;\nn:   4   win:   -4     |  if Avg_Utilization_Ratio <= 0;\nn:  11   win:    6     if Avg_Utilization_Ratio > 0.145\nn:   6   win:   14     |  if Months_Inactive_12_mon <= 2\nn:   3   win:   17     |  |  if marital_Status != Single;\nn:   3   win:   10     |  |  if marital_Status == Single;\nn:   5   win:   -3     |  if Months_Inactive_12_mon > 2;\n\nUsed:  Avg_Utilization_Ratio Customer_Age education_Level marital_Status Months_Inactive_12_mon Total_Amt_Chng_Q4_Q1\nBest train: 70 hold-out: 64\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "education_Level",
+        "marital_Status",
+        "Months_Inactive_12_mon",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 14,
+      "accuracy": 58,
+      "train_accuracy": 60,
+      "overfitting_gap": 2,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 60,
+      "stability": 40.8,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  15   win:   21     if Avg_Utilization_Ratio <= 0.168\nn:  11   win:   37     |  if Avg_Utilization_Ratio > 0\nn:   4   win:   51     |  |  if Avg_Utilization_Ratio <= 0.061;\nn:   7   win:   28     |  |  if Avg_Utilization_Ratio > 0.061\nn:   4   win:   35     |  |  |  if Customer_Age <= 46;\nn:   3   win:   19     |  |  |  if Customer_Age > 46;\nn:   4   win:  -22     |  if Avg_Utilization_Ratio <= 0;\nn:  15   win:   -5     if Avg_Utilization_Ratio > 0.168\nn:  12   win:   -1     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00030251\nn:   4   win:    4     |  |  if Total_Trans_Amt <= 1343;\nn:   8   win:   -5     |  |  if Total_Trans_Amt > 1343\nn:   5   win:   -1     |  |  |  if Dependent_count <= 2;\nn:   3   win:  -10     |  |  |  if Dependent_count > 2;\nn:   3   win:  -22     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00030251;\n\nUsed:  Avg_Utilization_Ratio Customer_Age Dependent_count Total_Trans_Amt Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 60 hold-out: 58\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "Dependent_count",
+        "Total_Trans_Amt",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 15,
+      "accuracy": 45,
+      "train_accuracy": 55,
+      "overfitting_gap": 10,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 55,
+      "stability": 34.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  17   win:   13     if Avg_Utilization_Ratio > 0\nn:   6   win:   44     |  if Avg_Utilization_Ratio <= 0.197\nn:   3   win:   51     |  |  if education_Level == Uneducated;\nn:   3   win:   36     |  |  if education_Level != Uneducated;\nn:  11   win:   -3     |  if Avg_Utilization_Ratio > 0.197\nn:   6   win:    1     |  |  if Avg_Utilization_Ratio <= 0.49\nn:   3   win:    2     |  |  |  if income_Category != $40K - $60K;\nn:   3   win:    0     |  |  |  if income_Category == $40K - $60K;\nn:   5   win:   -9     |  |  if Avg_Utilization_Ratio > 0.49;\nn:  13   win:  -17     if Avg_Utilization_Ratio <= 0\nn:  10   win:  -11     |  if Months_on_book <= 39\nn:   5   win:   -3     |  |  if Customer_Age > 39;\nn:   5   win:  -18     |  |  if Customer_Age <= 39;\nn:   3   win:  -36     |  if Months_on_book > 39;\n\nUsed:  Avg_Utilization_Ratio Customer_Age education_Level income_Category Months_on_book\nBest train: 55 hold-out: 45\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "education_Level",
+        "income_Category",
+        "Months_on_book"
+      ]
+    },
+    {
+      "run": 16,
+      "accuracy": 67,
+      "train_accuracy": 60,
+      "overfitting_gap": -7,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 84,
+      "stability": 45.5,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  17   win:   42     if Avg_Utilization_Ratio <= 0.101\nn:  11   win:   69     |  if Avg_Utilization_Ratio > 0\nn:   3   win:   84     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99991;\nn:   8   win:   63     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99991\nn:   4   win:   74     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99983;\nn:   4   win:   53     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99983;\nn:   6   win:   -6     |  if Avg_Utilization_Ratio <= 0\nn:   3   win:    0     |  |  if gender != F;\nn:   3   win:  -14     |  |  if gender == F;\nn:  13   win:    2     if Avg_Utilization_Ratio > 0.101\nn:   9   win:    7     |  if Total_Amt_Chng_Q4_Q1 > 0.689\nn:   6   win:    8     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99975;\nn:   3   win:    4     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99975;\nn:   4   win:   -7     |  if Total_Amt_Chng_Q4_Q1 <= 0.689;\n\nUsed:  Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 Avg_Utilization_Ratio gender Total_Amt_Chng_Q4_Q1\nBest train: 60 hold-out: 67\n",
+      "features": [
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",
+        "Avg_Utilization_Ratio",
+        "gender",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 17,
+      "accuracy": 11,
+      "train_accuracy": 63,
+      "overfitting_gap": 52,
+      "complexity": 6,
+      "tree_depth": 4,
+      "coverage": 83,
+      "stability": 27.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  15   win:   28     if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00019864\nn:   3   win:   83     |  if Total_Amt_Chng_Q4_Q1 > 0.886;\nn:  12   win:   14     |  if Total_Amt_Chng_Q4_Q1 <= 0.886\nn:   6   win:   34     |  |  if Contacts_Count_12_mon > 2\nn:   3   win:   42     |  |  |  if education_Level == High School;\nn:   3   win:   26     |  |  |  if education_Level != High School;\nn:   6   win:   -5     |  |  if Contacts_Count_12_mon <= 2;\nn:  15   win:    0     if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00019864\nn:   8   win:    8     |  if Total_Relationship_Count <= 4\nn:   3   win:   19     |  |  if Total_Trans_Amt > 2680;\nn:   5   win:    1     |  |  if Total_Trans_Amt <= 2680;\nn:   7   win:   -8     |  if Total_Relationship_Count > 4\nn:   3   win:   -3     |  |  if Total_Amt_Chng_Q4_Q1 > 0.808;\nn:   4   win:  -12     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.808;\n\nUsed:  Total_Amt_Chng_Q4_Q1 education_Level Total_Relationship_Count Contacts_Count_12_mon Total_Trans_Amt Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 63 hold-out: 11\n",
+      "features": [
+        "Total_Amt_Chng_Q4_Q1",
+        "education_Level",
+        "Total_Relationship_Count",
+        "Contacts_Count_12_mon",
+        "Total_Trans_Amt",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 18,
+      "accuracy": 53,
+      "train_accuracy": 60,
+      "overfitting_gap": 7,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 65,
+      "stability": 48.4,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  19   win:   24     if Avg_Utilization_Ratio > 0\nn:   4   win:   65     |  if Avg_Utilization_Ratio <= 0.077;\nn:  15   win:   13     |  if Avg_Utilization_Ratio > 0.077\nn:   7   win:   22     |  |  if Avg_Utilization_Ratio <= 0.264\nn:   3   win:   27     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99994;\nn:   4   win:   18     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99994;\nn:   8   win:    4     |  |  if Avg_Utilization_Ratio > 0.264\nn:   4   win:   10     |  |  |  if Total_Amt_Chng_Q4_Q1 > 0.724;\nn:   4   win:   -1     |  |  |  if Total_Amt_Chng_Q4_Q1 <= 0.724;\nn:  11   win:  -12     if Avg_Utilization_Ratio <= 0\nn:   6   win:   -3     |  if CLIENTNUM > 721158108\nn:   3   win:   -1     |  |  if marital_Status != Married;\nn:   3   win:   -6     |  |  if marital_Status == Married;\nn:   5   win:  -23     |  if CLIENTNUM <= 721158108;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM marital_Status Total_Amt_Chng_Q4_Q1 Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 60 hold-out: 53\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "marital_Status",
+        "Total_Amt_Chng_Q4_Q1",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 19,
+      "accuracy": 47,
+      "train_accuracy": 67,
+      "overfitting_gap": 20,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 76,
+      "stability": 52.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  10   win:   54     if Total_Amt_Chng_Q4_Q1 > 0.821\nn:   6   win:   76     |  if Avg_Utilization_Ratio <= 0.092;\nn:   4   win:   22     |  if Avg_Utilization_Ratio > 0.092;\nn:  20   win:   14     if Total_Amt_Chng_Q4_Q1 <= 0.821\nn:   8   win:   25     |  if Dependent_count > 2\nn:   3   win:   42     |  |  if CLIENTNUM > 756383283;\nn:   5   win:   15     |  |  if CLIENTNUM <= 756383283;\nn:  12   win:    7     |  if Dependent_count <= 2\nn:   7   win:   14     |  |  if CLIENTNUM <= 718815108\nn:   3   win:   26     |  |  |  if CLIENTNUM > 712555233;\nn:   4   win:    4     |  |  |  if CLIENTNUM <= 712555233;\nn:   5   win:   -2     |  |  if CLIENTNUM > 718815108;\n\nUsed:  CLIENTNUM Dependent_count Total_Amt_Chng_Q4_Q1 Avg_Utilization_Ratio\nBest train: 67 hold-out: 47\n",
+      "features": [
+        "CLIENTNUM",
+        "Dependent_count",
+        "Total_Amt_Chng_Q4_Q1",
+        "Avg_Utilization_Ratio"
+      ]
+    },
+    {
+      "run": 20,
+      "accuracy": 71,
+      "train_accuracy": 47,
+      "overfitting_gap": -24,
+      "complexity": 3,
+      "tree_depth": 4,
+      "coverage": 63,
+      "stability": 57.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  15   win:   27     if Avg_Utilization_Ratio <= 0.326\nn:  10   win:   43     |  if Avg_Utilization_Ratio > 0\nn:   6   win:   53     |  |  if Avg_Utilization_Ratio <= 0.18\nn:   3   win:   63     |  |  |  if marital_Status != Single;\nn:   3   win:   44     |  |  |  if marital_Status == Single;\nn:   4   win:   27     |  |  if Avg_Utilization_Ratio > 0.18;\nn:   5   win:   -3     |  if Avg_Utilization_Ratio <= 0;\nn:  15   win:   -2     if Avg_Utilization_Ratio > 0.326\nn:  10   win:    2     |  if CLIENTNUM > 710770383\nn:   5   win:   10     |  |  if Avg_Utilization_Ratio <= 0.511;\nn:   5   win:   -6     |  |  if Avg_Utilization_Ratio > 0.511;\nn:   5   win:  -11     |  if CLIENTNUM <= 710770383;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM marital_Status\nBest train: 47 hold-out: 71\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "marital_Status"
+      ]
+    },
+    {
+      "run": 21,
+      "accuracy": 58,
+      "train_accuracy": 66,
+      "overfitting_gap": 8,
+      "complexity": 6,
+      "tree_depth": 4,
+      "coverage": 86,
+      "stability": 41.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  20   win:   36     if Avg_Utilization_Ratio > 0\nn:   9   win:   70     |  if Avg_Utilization_Ratio <= 0.118\nn:   3   win:   86     |  |  if Customer_Age > 43;\nn:   6   win:   62     |  |  if Customer_Age <= 43\nn:   3   win:   70     |  |  |  if marital_Status == Married;\nn:   3   win:   53     |  |  |  if marital_Status != Married;\nn:  11   win:    8     |  if Avg_Utilization_Ratio > 0.118\nn:   8   win:   13     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99988\nn:   5   win:   19     |  |  |  if CLIENTNUM <= 755420433;\nn:   3   win:    3     |  |  |  if CLIENTNUM > 755420433;\nn:   3   win:   -5     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99988;\nn:  10   win:  -16     if Avg_Utilization_Ratio <= 0\nn:   7   win:  -10     |  if Dependent_count <= 3\nn:   3   win:   -2     |  |  if CLIENTNUM > 720903258;\nn:   4   win:  -16     |  |  if CLIENTNUM <= 720903258;\nn:   3   win:  -32     |  if Dependent_count > 3;\n\nUsed:  CLIENTNUM Avg_Utilization_Ratio Customer_Age Dependent_count marital_Status Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 66 hold-out: 58\n",
+      "features": [
+        "CLIENTNUM",
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "Dependent_count",
+        "marital_Status",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 22,
+      "accuracy": 66,
+      "train_accuracy": 70,
+      "overfitting_gap": 4,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 90,
+      "stability": 39.6,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  18   win:   37     if Avg_Utilization_Ratio <= 0.091\nn:  12   win:   59     |  if Avg_Utilization_Ratio > 0\nn:   7   win:   73     |  |  if Avg_Utilization_Ratio <= 0.063\nn:   3   win:   90     |  |  |  if Total_Amt_Chng_Q4_Q1 > 0.745;\nn:   4   win:   61     |  |  |  if Total_Amt_Chng_Q4_Q1 <= 0.745;\nn:   5   win:   39     |  |  if Avg_Utilization_Ratio > 0.063;\nn:   6   win:   -7     |  if Avg_Utilization_Ratio <= 0\nn:   3   win:   -2     |  |  if gender != F;\nn:   3   win:  -13     |  |  if gender == F;\nn:  12   win:    7     if Avg_Utilization_Ratio > 0.091\nn:   7   win:   15     |  if Dependent_count > 1\nn:   3   win:   17     |  |  if Total_Relationship_Count > 3;\nn:   4   win:   14     |  |  if Total_Relationship_Count <= 3;\nn:   5   win:   -3     |  if Dependent_count <= 1;\n\nUsed:  Avg_Utilization_Ratio gender Dependent_count Total_Relationship_Count Total_Amt_Chng_Q4_Q1\nBest train: 70 hold-out: 66\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "gender",
+        "Dependent_count",
+        "Total_Relationship_Count",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 23,
+      "accuracy": 57,
+      "train_accuracy": 73,
+      "overfitting_gap": 16,
+      "complexity": 7,
+      "tree_depth": 4,
+      "coverage": 82,
+      "stability": 39.7,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  20   win:   34     if Avg_Utilization_Ratio > 0\nn:  11   win:   62     |  if Avg_Utilization_Ratio <= 0.135\nn:   7   win:   75     |  |  if Contacts_Count_12_mon <= 2\nn:   4   win:   82     |  |  |  if Customer_Age <= 48;\nn:   3   win:   67     |  |  |  if Customer_Age > 48;\nn:   4   win:   37     |  |  if Contacts_Count_12_mon > 2;\nn:   9   win:    0     |  if Avg_Utilization_Ratio > 0.135\nn:   3   win:   11     |  |  if Total_Relationship_Count > 4;\nn:   6   win:   -5     |  |  if Total_Relationship_Count <= 4\nn:   3   win:   -1     |  |  |  if marital_Status == Married;\nn:   3   win:  -10     |  |  |  if marital_Status != Married;\nn:  10   win:   -7     if Avg_Utilization_Ratio <= 0\nn:   7   win:    2     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00019519\nn:   4   win:   10     |  |  if CLIENTNUM <= 715491483;\nn:   3   win:   -8     |  |  if CLIENTNUM > 715491483;\nn:   3   win:  -30     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00019519;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM Customer_Age marital_Status Total_Relationship_Count Contacts_Count_12_mon Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 73 hold-out: 57\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "Customer_Age",
+        "marital_Status",
+        "Total_Relationship_Count",
+        "Contacts_Count_12_mon",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 24,
+      "accuracy": 64,
+      "train_accuracy": 58,
+      "overfitting_gap": -6,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 70,
+      "stability": 50.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  14   win:   29     if Avg_Utilization_Ratio <= 0.15\nn:   6   win:   70     |  if Avg_Utilization_Ratio > 0.025;\nn:   8   win:   -1     |  if Avg_Utilization_Ratio <= 0.025\nn:   4   win:    7     |  |  if Total_Trans_Amt > 3763;\nn:   4   win:  -10     |  |  if Total_Trans_Amt <= 3763;\nn:  16   win:    5     if Avg_Utilization_Ratio > 0.15\nn:  13   win:    8     |  if CLIENTNUM <= 717682233\nn:   5   win:   12     |  |  if CLIENTNUM <= 710369658;\nn:   8   win:    5     |  |  if CLIENTNUM > 710369658\nn:   5   win:    9     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99988;\nn:   3   win:    0     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99988;\nn:   3   win:   -8     |  if CLIENTNUM > 717682233;\n\nUsed:  CLIENTNUM Avg_Utilization_Ratio Total_Trans_Amt Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 58 hold-out: 64\n",
+      "features": [
+        "CLIENTNUM",
+        "Avg_Utilization_Ratio",
+        "Total_Trans_Amt",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 25,
+      "accuracy": 63,
+      "train_accuracy": 68,
+      "overfitting_gap": 5,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 104,
+      "stability": 44.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  23   win:   44     if Avg_Utilization_Ratio > 0.006\nn:   9   win:   82     |  if Avg_Utilization_Ratio <= 0.08\nn:   6   win:   95     |  |  if Avg_Utilization_Ratio <= 0.061\nn:   3   win:  104     |  |  |  if income_Category != $120K +;\nn:   3   win:   86     |  |  |  if income_Category == $120K +;\nn:   3   win:   56     |  |  if Avg_Utilization_Ratio > 0.061;\nn:  14   win:   20     |  if Avg_Utilization_Ratio > 0.08\nn:   6   win:   37     |  |  if Avg_Utilization_Ratio <= 0.183;\nn:   8   win:    8     |  |  if Avg_Utilization_Ratio > 0.183\nn:   4   win:   17     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00010684;\nn:   4   win:   -1     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00010684;\nn:   7   win:   -1     if Avg_Utilization_Ratio <= 0.006\nn:   3   win:    6     |  if CLIENTNUM > 717177783;\nn:   4   win:   -7     |  if CLIENTNUM <= 717177783;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM income_Category Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 68 hold-out: 63\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "income_Category",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 26,
+      "accuracy": 68,
+      "train_accuracy": 44,
+      "overfitting_gap": -24,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 49,
+      "stability": 34.4,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  23   win:   16     if Avg_Utilization_Ratio > 0\nn:  13   win:   26     |  if Avg_Utilization_Ratio <= 0.139\nn:   8   win:   34     |  |  if Total_Trans_Ct > 41\nn:   3   win:   49     |  |  |  if Months_on_book > 37;\nn:   5   win:   25     |  |  |  if Months_on_book <= 37;\nn:   5   win:   12     |  |  if Total_Trans_Ct <= 41;\nn:  10   win:    3     |  if Avg_Utilization_Ratio > 0.139\nn:   7   win:    6     |  |  if Dependent_count <= 2\nn:   3   win:    8     |  |  |  if Months_on_book > 34;\nn:   4   win:    4     |  |  |  if Months_on_book <= 34;\nn:   3   win:   -1     |  |  if Dependent_count > 2;\nn:   7   win:  -19     if Avg_Utilization_Ratio <= 0\nn:   4   win:  -14     |  if Contacts_Count_12_mon <= 2;\nn:   3   win:  -26     |  if Contacts_Count_12_mon > 2;\n\nUsed:  Months_on_book Avg_Utilization_Ratio Dependent_count Contacts_Count_12_mon Total_Trans_Ct\nBest train: 44 hold-out: 68\n",
+      "features": [
+        "Months_on_book",
+        "Avg_Utilization_Ratio",
+        "Dependent_count",
+        "Contacts_Count_12_mon",
+        "Total_Trans_Ct"
+      ]
+    },
+    {
+      "run": 27,
+      "accuracy": 64,
+      "train_accuracy": 65,
+      "overfitting_gap": 1,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 65,
+      "stability": 46.5,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  21   win:   19     if Avg_Utilization_Ratio <= 0.227\nn:  13   win:   35     |  if Avg_Utilization_Ratio > 0\nn:   5   win:   56     |  |  if Total_Amt_Chng_Q4_Q1 > 0.8;\nn:   8   win:   23     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.8\nn:   4   win:   33     |  |  |  if Avg_Utilization_Ratio <= 0.084;\nn:   4   win:   12     |  |  |  if Avg_Utilization_Ratio > 0.084;\nn:   8   win:   -6     |  if Avg_Utilization_Ratio <= 0\nn:   4   win:    3     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99988;\nn:   4   win:  -16     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99988;\nn:   9   win:    1     if Avg_Utilization_Ratio > 0.227\nn:   4   win:   11     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00018145;\nn:   5   win:   -6     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00018145;\n\nUsed:  Avg_Utilization_Ratio Total_Amt_Chng_Q4_Q1 Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 65 hold-out: 64\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Total_Amt_Chng_Q4_Q1",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 28,
+      "accuracy": 29,
+      "train_accuracy": 63,
+      "overfitting_gap": 34,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 63,
+      "stability": 47.2,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  16   win:   19     if Avg_Utilization_Ratio <= 0.265\nn:   4   win:   52     |  if Customer_Age > 51;\nn:  12   win:    8     |  if Customer_Age <= 51\nn:   8   win:   18     |  |  if Total_Amt_Chng_Q4_Q1 > 0.645\nn:   5   win:   33     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00035543;\nn:   3   win:   -5     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00035543;\nn:   4   win:  -11     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.645;\nn:  14   win:   -2     if Avg_Utilization_Ratio > 0.265\nn:  11   win:    0     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00022869\nn:   4   win:    5     |  |  if Total_Trans_Amt > 4421;\nn:   7   win:   -3     |  |  if Total_Trans_Amt <= 4421\nn:   3   win:    1     |  |  |  if Customer_Age > 47;\nn:   4   win:   -6     |  |  |  if Customer_Age <= 47;\nn:   3   win:  -11     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00022869;\n\nUsed:  Customer_Age Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 Total_Amt_Chng_Q4_Q1 Total_Trans_Amt Avg_Utilization_Ratio\nBest train: 63 hold-out: 29\n",
+      "features": [
+        "Customer_Age",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Amt",
+        "Avg_Utilization_Ratio"
+      ]
+    },
+    {
+      "run": 29,
+      "accuracy": 60,
+      "train_accuracy": 42,
+      "overfitting_gap": -18,
+      "complexity": 7,
+      "tree_depth": 4,
+      "coverage": 50,
+      "stability": 40.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  20   win:   21     if Avg_Utilization_Ratio <= 0.224\nn:  13   win:   34     |  if Avg_Utilization_Ratio > 0\nn:   6   win:   48     |  |  if Contacts_Count_12_mon > 2\nn:   3   win:   50     |  |  |  if education_Level != Unknown;\nn:   3   win:   46     |  |  |  if education_Level == Unknown;\nn:   7   win:   22     |  |  if Contacts_Count_12_mon <= 2\nn:   3   win:   33     |  |  |  if Total_Relationship_Count > 4;\nn:   4   win:   13     |  |  |  if Total_Relationship_Count <= 4;\nn:   7   win:   -1     |  if Avg_Utilization_Ratio <= 0\nn:   3   win:   15     |  |  if CLIENTNUM > 715717608;\nn:   4   win:  -14     |  |  if CLIENTNUM <= 715717608;\nn:  10   win:    0     if Avg_Utilization_Ratio > 0.224\nn:   4   win:    8     |  if Total_Amt_Chng_Q4_Q1 > 0.777;\nn:   6   win:   -7     |  if Total_Amt_Chng_Q4_Q1 <= 0.777\nn:   3   win:   -1     |  |  if marital_Status == Married;\nn:   3   win:  -13     |  |  if marital_Status != Married;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM education_Level marital_Status Total_Relationship_Count Contacts_Count_12_mon Total_Amt_Chng_Q4_Q1\nBest train: 42 hold-out: 60\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "education_Level",
+        "marital_Status",
+        "Total_Relationship_Count",
+        "Contacts_Count_12_mon",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 30,
+      "accuracy": 50,
+      "train_accuracy": 73,
+      "overfitting_gap": 23,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 80,
+      "stability": 47.6,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  13   win:   38     if Total_Trans_Ct <= 71\nn:  10   win:   48     |  if Avg_Utilization_Ratio <= 0.108\nn:   3   win:   80     |  |  if Total_Amt_Chng_Q4_Q1 > 0.875;\nn:   7   win:   35     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.875\nn:   3   win:   53     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99986;\nn:   4   win:   21     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99986;\nn:   3   win:    3     |  if Avg_Utilization_Ratio > 0.108;\nn:  17   win:    6     if Total_Trans_Ct > 71\nn:  12   win:   12     |  if Avg_Utilization_Ratio <= 0.186\nn:   5   win:   28     |  |  if CLIENTNUM <= 716909283;\nn:   7   win:    1     |  |  if CLIENTNUM > 716909283\nn:   3   win:   17     |  |  |  if CLIENTNUM > 771244383;\nn:   4   win:  -11     |  |  |  if CLIENTNUM <= 771244383;\nn:   5   win:   -7     |  if Avg_Utilization_Ratio > 0.186;\n\nUsed:  CLIENTNUM Avg_Utilization_Ratio Total_Amt_Chng_Q4_Q1 Total_Trans_Ct Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 73 hold-out: 50\n",
+      "features": [
+        "CLIENTNUM",
+        "Avg_Utilization_Ratio",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Ct",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 31,
+      "accuracy": 69,
+      "train_accuracy": 69,
+      "overfitting_gap": 0,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 83,
+      "stability": 43.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  12   win:   54     if Total_Relationship_Count <= 2\nn:   7   win:   74     |  if Avg_Utilization_Ratio <= 0.071\nn:   3   win:   83     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00017297;\nn:   4   win:   67     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00017297;\nn:   5   win:   26     |  if Avg_Utilization_Ratio > 0.071;\nn:  18   win:   14     if Total_Relationship_Count > 2\nn:  14   win:   23     |  if Total_Trans_Amt > 2546\nn:   9   win:   38     |  |  if Avg_Utilization_Ratio > 0\nn:   5   win:   52     |  |  |  if Avg_Utilization_Ratio <= 0.068;\nn:   4   win:   21     |  |  |  if Avg_Utilization_Ratio > 0.068;\nn:   5   win:   -4     |  |  if Avg_Utilization_Ratio <= 0;\nn:   4   win:  -15     |  if Total_Trans_Amt <= 2546;\n\nUsed:  Avg_Utilization_Ratio Total_Relationship_Count Total_Trans_Amt Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 69 hold-out: 69\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Total_Relationship_Count",
+        "Total_Trans_Amt",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 32,
+      "accuracy": 28,
+      "train_accuracy": 63,
+      "overfitting_gap": 35,
+      "complexity": 5,
+      "tree_depth": 5,
+      "coverage": 63,
+      "stability": 52.8,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  20   win:   22     if Total_Trans_Amt > 3541\nn:  17   win:   26     |  if Avg_Utilization_Ratio <= 0.237\nn:  12   win:   34     |  |  if Avg_Utilization_Ratio > 0\nn:   4   win:   61     |  |  |  if Avg_Utilization_Ratio <= 0.085;\nn:   8   win:   21     |  |  |  if Avg_Utilization_Ratio > 0.085\nn:   5   win:   26     |  |  |  |  if Customer_Age <= 48;\nn:   3   win:   13     |  |  |  |  if Customer_Age > 48;\nn:   5   win:    5     |  |  if Avg_Utilization_Ratio <= 0;\nn:   3   win:   -1     |  if Avg_Utilization_Ratio > 0.237;\nn:  10   win:   -9     if Total_Trans_Amt <= 3541\nn:   3   win:    4     |  if CLIENTNUM > 717202083;\nn:   7   win:  -15     |  if CLIENTNUM <= 717202083\nn:   3   win:   -1     |  |  if Total_Amt_Chng_Q4_Q1 > 0.863;\nn:   4   win:  -26     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.863;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM Customer_Age Total_Amt_Chng_Q4_Q1 Total_Trans_Amt\nBest train: 63 hold-out: 28\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "Customer_Age",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Amt"
+      ]
+    },
+    {
+      "run": 33,
+      "accuracy": 66,
+      "train_accuracy": 68,
+      "overfitting_gap": 2,
+      "complexity": 7,
+      "tree_depth": 4,
+      "coverage": 106,
+      "stability": 33.4,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  16   win:   50     if Avg_Utilization_Ratio <= 0.156\nn:  11   win:   65     |  if Total_Amt_Chng_Q4_Q1 > 0.697\nn:   6   win:   82     |  |  if Contacts_Count_12_mon <= 3\nn:   3   win:  106     |  |  |  if card_Category != Blue;\nn:   3   win:   58     |  |  |  if card_Category == Blue;\nn:   5   win:   45     |  |  if Contacts_Count_12_mon > 3;\nn:   5   win:   17     |  if Total_Amt_Chng_Q4_Q1 <= 0.697;\nn:  14   win:   12     if Avg_Utilization_Ratio > 0.156\nn:  10   win:   16     |  if Months_Inactive_12_mon > 1\nn:   3   win:   26     |  |  if Total_Trans_Ct > 80;\nn:   7   win:   12     |  |  if Total_Trans_Ct <= 80\nn:   4   win:   15     |  |  |  if Total_Trans_Amt <= 3998;\nn:   3   win:    8     |  |  |  if Total_Trans_Amt > 3998;\nn:   4   win:    1     |  if Months_Inactive_12_mon <= 1;\n\nUsed:  card_Category Months_Inactive_12_mon Contacts_Count_12_mon Total_Amt_Chng_Q4_Q1 Total_Trans_Amt Total_Trans_Ct Avg_Utilization_Ratio\nBest train: 68 hold-out: 66\n",
+      "features": [
+        "card_Category",
+        "Months_Inactive_12_mon",
+        "Contacts_Count_12_mon",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Amt",
+        "Total_Trans_Ct",
+        "Avg_Utilization_Ratio"
+      ]
+    },
+    {
+      "run": 34,
+      "accuracy": 40,
+      "train_accuracy": 55,
+      "overfitting_gap": 15,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 55,
+      "stability": 44.8,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  11   win:   17     if Total_Trans_Amt <= 1980\nn:   7   win:   26     |  if Total_Trans_Ct > 24\nn:   3   win:   35     |  |  if Contacts_Count_12_mon > 2;\nn:   4   win:   19     |  |  if Contacts_Count_12_mon <= 2;\nn:   4   win:    3     |  if Total_Trans_Ct <= 24;\nn:  19   win:   -1     if Total_Trans_Amt > 1980\nn:   5   win:   21     |  if Total_Trans_Amt > 4798;\nn:  14   win:   -9     |  if Total_Trans_Amt <= 4798\nn:   7   win:   -1     |  |  if Avg_Utilization_Ratio > 0.342\nn:   3   win:    3     |  |  |  if Avg_Utilization_Ratio > 0.603;\nn:   4   win:   -5     |  |  |  if Avg_Utilization_Ratio <= 0.603;\nn:   7   win:  -17     |  |  if Avg_Utilization_Ratio <= 0.342\nn:   4   win:  -11     |  |  |  if Total_Amt_Chng_Q4_Q1 <= 0.804;\nn:   3   win:  -24     |  |  |  if Total_Amt_Chng_Q4_Q1 > 0.804;\n\nUsed:  Total_Trans_Amt Avg_Utilization_Ratio Contacts_Count_12_mon Total_Amt_Chng_Q4_Q1 Total_Trans_Ct\nBest train: 55 hold-out: 40\n",
+      "features": [
+        "Total_Trans_Amt",
+        "Avg_Utilization_Ratio",
+        "Contacts_Count_12_mon",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Ct"
+      ]
+    },
+    {
+      "run": 35,
+      "accuracy": 42,
+      "train_accuracy": 68,
+      "overfitting_gap": 26,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 82,
+      "stability": 51.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  18   win:   41     if Avg_Utilization_Ratio <= 0.149\nn:  13   win:   57     |  if Avg_Utilization_Ratio > 0\nn:   4   win:   82     |  |  if CLIENTNUM <= 713537733;\nn:   9   win:   46     |  |  if CLIENTNUM > 713537733\nn:   5   win:   62     |  |  |  if Total_Relationship_Count <= 3;\nn:   4   win:   25     |  |  |  if Total_Relationship_Count > 3;\nn:   5   win:    0     |  if Avg_Utilization_Ratio <= 0;\nn:  12   win:    2     if Avg_Utilization_Ratio > 0.149\nn:   7   win:    9     |  if Customer_Age <= 44\nn:   4   win:   11     |  |  if Avg_Utilization_Ratio <= 0.453;\nn:   3   win:    6     |  |  if Avg_Utilization_Ratio > 0.453;\nn:   5   win:   -7     |  if Customer_Age > 44;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM Customer_Age Total_Relationship_Count\nBest train: 68 hold-out: 42\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "Customer_Age",
+        "Total_Relationship_Count"
+      ]
+    },
+    {
+      "run": 36,
+      "accuracy": 52,
+      "train_accuracy": 73,
+      "overfitting_gap": 21,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 73,
+      "stability": 39.6,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  18   win:   16     if Avg_Utilization_Ratio <= 0.223\nn:  12   win:   30     |  if Avg_Utilization_Ratio > 0\nn:   7   win:   44     |  |  if Months_on_book > 33\nn:   4   win:   55     |  |  |  if Months_on_book <= 38;\nn:   3   win:   29     |  |  |  if Months_on_book > 38;\nn:   5   win:    9     |  |  if Months_on_book <= 33;\nn:   6   win:  -10     |  if Avg_Utilization_Ratio <= 0;\nn:  12   win:    0     if Avg_Utilization_Ratio > 0.223\nn:   3   win:   10     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00020321;\nn:   9   win:   -2     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00020321\nn:   3   win:    2     |  |  if CLIENTNUM > 716186883;\nn:   6   win:   -4     |  |  if CLIENTNUM <= 716186883\nn:   3   win:   -4     |  |  |  if gender != F;\nn:   3   win:   -5     |  |  |  if gender == F;\n\nUsed:  Months_on_book Avg_Utilization_Ratio CLIENTNUM gender Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 73 hold-out: 52\n",
+      "features": [
+        "Months_on_book",
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "gender",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 37,
+      "accuracy": 64,
+      "train_accuracy": 59,
+      "overfitting_gap": -5,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 65,
+      "stability": 44.4,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  23   win:   32     if Avg_Utilization_Ratio <= 0.2\nn:  17   win:   43     |  if Avg_Utilization_Ratio > 0\nn:  10   win:   58     |  |  if Avg_Utilization_Ratio <= 0.082\nn:   5   win:   65     |  |  |  if Total_Amt_Chng_Q4_Q1 <= 0.762;\nn:   5   win:   50     |  |  |  if Total_Amt_Chng_Q4_Q1 > 0.762;\nn:   7   win:   21     |  |  if Avg_Utilization_Ratio > 0.082\nn:   4   win:   27     |  |  |  if Contacts_Count_12_mon <= 2;\nn:   3   win:   14     |  |  |  if Contacts_Count_12_mon > 2;\nn:   6   win:    1     |  if Avg_Utilization_Ratio <= 0\nn:   3   win:   10     |  |  if gender != F;\nn:   3   win:   -7     |  |  if gender == F;\nn:   7   win:   -2     if Avg_Utilization_Ratio > 0.2\nn:   3   win:    5     |  if Customer_Age > 45;\nn:   4   win:   -7     |  if Customer_Age <= 45;\n\nUsed:  Avg_Utilization_Ratio Customer_Age gender Contacts_Count_12_mon Total_Amt_Chng_Q4_Q1\nBest train: 59 hold-out: 64\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "gender",
+        "Contacts_Count_12_mon",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 38,
+      "accuracy": 71,
+      "train_accuracy": 71,
+      "overfitting_gap": 0,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 71,
+      "stability": 46.5,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  23   win:   18     if Avg_Utilization_Ratio <= 0.227\nn:  16   win:   31     |  if Avg_Utilization_Ratio > 0\nn:   8   win:   53     |  |  if Avg_Utilization_Ratio <= 0.104\nn:   3   win:   70     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.00034872;\nn:   5   win:   42     |  |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.00034872;\nn:   8   win:    9     |  |  if Avg_Utilization_Ratio > 0.104\nn:   3   win:   23     |  |  |  if Total_Amt_Chng_Q4_Q1 > 0.691;\nn:   5   win:    1     |  |  |  if Total_Amt_Chng_Q4_Q1 <= 0.691;\nn:   7   win:  -12     |  if Avg_Utilization_Ratio <= 0\nn:   3   win:   -3     |  |  if Total_Relationship_Count > 3;\nn:   4   win:  -19     |  |  if Total_Relationship_Count <= 3;\nn:   7   win:   -7     if Avg_Utilization_Ratio > 0.227\nn:   4   win:   -2     |  if Total_Relationship_Count <= 3;\nn:   3   win:  -13     |  if Total_Relationship_Count > 3;\n\nUsed:  Avg_Utilization_Ratio Total_Relationship_Count Total_Amt_Chng_Q4_Q1 Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 71 hold-out: 71\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Total_Relationship_Count",
+        "Total_Amt_Chng_Q4_Q1",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    },
+    {
+      "run": 39,
+      "accuracy": 60,
+      "train_accuracy": 66,
+      "overfitting_gap": 6,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 72,
+      "stability": 38.8,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  20   win:   35     if Avg_Utilization_Ratio > 0\nn:   9   win:   64     |  if Avg_Utilization_Ratio <= 0.088\nn:   5   win:   72     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99972;\nn:   4   win:   54     |  |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99972;\nn:  11   win:   11     |  if Avg_Utilization_Ratio > 0.088\nn:   6   win:   23     |  |  if Avg_Utilization_Ratio <= 0.282\nn:   3   win:   30     |  |  |  if gender != M;\nn:   3   win:   17     |  |  |  if gender == M;\nn:   5   win:   -3     |  |  if Avg_Utilization_Ratio > 0.282;\nn:  10   win:  -12     if Avg_Utilization_Ratio <= 0\nn:   6   win:   -1     |  if CLIENTNUM <= 769974258\nn:   3   win:    9     |  |  if income_Category == $80K - $120K;\nn:   3   win:  -12     |  |  if income_Category != $80K - $120K;\nn:   4   win:  -30     |  if CLIENTNUM > 769974258;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM gender income_Category Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 66 hold-out: 60\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "gender",
+        "income_Category",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 40,
+      "accuracy": 62,
+      "train_accuracy": 70,
+      "overfitting_gap": 8,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 103,
+      "stability": 41.6,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  24   win:   53     if Avg_Utilization_Ratio <= 0.101\nn:  16   win:   75     |  if Avg_Utilization_Ratio > 0\nn:   7   win:   90     |  |  if Dependent_count > 3\nn:   3   win:  103     |  |  |  if Avg_Utilization_Ratio > 0.037;\nn:   4   win:   81     |  |  |  if Avg_Utilization_Ratio <= 0.037;\nn:   9   win:   64     |  |  if Dependent_count <= 3\nn:   4   win:   84     |  |  |  if Total_Amt_Chng_Q4_Q1 > 0.761;\nn:   5   win:   48     |  |  |  if Total_Amt_Chng_Q4_Q1 <= 0.761;\nn:   8   win:    9     |  if Avg_Utilization_Ratio <= 0\nn:   5   win:   25     |  |  if Total_Relationship_Count <= 3;\nn:   3   win:  -17     |  |  if Total_Relationship_Count > 3;\nn:   6   win:    6     if Avg_Utilization_Ratio > 0.101\nn:   3   win:   11     |  if marital_Status != Married;\nn:   3   win:    0     |  if marital_Status == Married;\n\nUsed:  Avg_Utilization_Ratio Dependent_count marital_Status Total_Relationship_Count Total_Amt_Chng_Q4_Q1\nBest train: 70 hold-out: 62\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Dependent_count",
+        "marital_Status",
+        "Total_Relationship_Count",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 41,
+      "accuracy": 61,
+      "train_accuracy": 56,
+      "overfitting_gap": -5,
+      "complexity": 6,
+      "tree_depth": 4,
+      "coverage": 71,
+      "stability": 36.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  26   win:   25     if CLIENTNUM > 710603958\nn:  12   win:   42     |  if Avg_Utilization_Ratio <= 0.071\nn:   3   win:   71     |  |  if Months_Inactive_12_mon > 2;\nn:   9   win:   33     |  |  if Months_Inactive_12_mon <= 2\nn:   6   win:   43     |  |  |  if Total_Relationship_Count <= 4;\nn:   3   win:   12     |  |  |  if Total_Relationship_Count > 4;\nn:  14   win:    9     |  if Avg_Utilization_Ratio > 0.071\nn:   6   win:   22     |  |  if Months_on_book > 38\nn:   3   win:   25     |  |  |  if marital_Status != Married;\nn:   3   win:   19     |  |  |  if marital_Status == Married;\nn:   8   win:    0     |  |  if Months_on_book <= 38\nn:   4   win:    6     |  |  |  if Total_Relationship_Count > 4;\nn:   4   win:   -5     |  |  |  if Total_Relationship_Count <= 4;\nn:   4   win:  -13     if CLIENTNUM <= 710603958;\n\nUsed:  Total_Relationship_Count CLIENTNUM marital_Status Months_on_book Months_Inactive_12_mon Avg_Utilization_Ratio\nBest train: 56 hold-out: 61\n",
+      "features": [
+        "Total_Relationship_Count",
+        "CLIENTNUM",
+        "marital_Status",
+        "Months_on_book",
+        "Months_Inactive_12_mon",
+        "Avg_Utilization_Ratio"
+      ]
+    },
+    {
+      "run": 42,
+      "accuracy": 60,
+      "train_accuracy": 67,
+      "overfitting_gap": 7,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 79,
+      "stability": 48.5,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  19   win:   35     if Avg_Utilization_Ratio > 0\nn:   6   win:   79     |  if Avg_Utilization_Ratio <= 0.098;\nn:  13   win:   15     |  if Avg_Utilization_Ratio > 0.098\nn:   5   win:   30     |  |  if Avg_Utilization_Ratio <= 0.303;\nn:   8   win:    6     |  |  if Avg_Utilization_Ratio > 0.303\nn:   5   win:    9     |  |  |  if CLIENTNUM <= 785218458;\nn:   3   win:    1     |  |  |  if CLIENTNUM > 785218458;\nn:  11   win:   -8     if Avg_Utilization_Ratio <= 0\nn:   6   win:    5     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 > 0.99963\nn:   3   win:   14     |  |  if marital_Status != Married;\nn:   3   win:   -2     |  |  if marital_Status == Married;\nn:   5   win:  -26     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2 <= 0.99963;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM marital_Status Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2\nBest train: 67 hold-out: 60\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "marital_Status",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2"
+      ]
+    },
+    {
+      "run": 43,
+      "accuracy": 21,
+      "train_accuracy": 59,
+      "overfitting_gap": 38,
+      "complexity": 4,
+      "tree_depth": 5,
+      "coverage": 59,
+      "stability": 47.5,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:   3   win:   47     if Total_Trans_Ct > 87;\nn:  27   win:    0     if Total_Trans_Ct <= 87\nn:  19   win:    8     |  if Avg_Utilization_Ratio > 0\nn:   8   win:   24     |  |  if Avg_Utilization_Ratio <= 0.187\nn:   4   win:   39     |  |  |  if Customer_Age > 35;\nn:   4   win:    9     |  |  |  if Customer_Age <= 35;\nn:  11   win:   -2     |  |  if Avg_Utilization_Ratio > 0.187\nn:   3   win:    9     |  |  |  if Avg_Utilization_Ratio > 0.636;\nn:   8   win:   -7     |  |  |  if Avg_Utilization_Ratio <= 0.636\nn:   4   win:   -2     |  |  |  |  if Total_Trans_Ct <= 59;\nn:   4   win:  -11     |  |  |  |  if Total_Trans_Ct > 59;\nn:   8   win:  -22     |  if Avg_Utilization_Ratio <= 0\nn:   4   win:  -10     |  |  if Total_Trans_Amt > 3913;\nn:   4   win:  -35     |  |  if Total_Trans_Amt <= 3913;\n\nUsed:  Avg_Utilization_Ratio Total_Trans_Ct Customer_Age Total_Trans_Amt\nBest train: 59 hold-out: 21\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Total_Trans_Ct",
+        "Customer_Age",
+        "Total_Trans_Amt"
+      ]
+    },
+    {
+      "run": 44,
+      "accuracy": 21,
+      "train_accuracy": 68,
+      "overfitting_gap": 47,
+      "complexity": 5,
+      "tree_depth": 4,
+      "coverage": 68,
+      "stability": 52.8,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  17   win:   15     if Total_Trans_Amt <= 3806\nn:  10   win:   27     |  if Avg_Utilization_Ratio <= 0.161\nn:   7   win:   38     |  |  if CLIENTNUM <= 716984658\nn:   3   win:   49     |  |  |  if Customer_Age > 49;\nn:   4   win:   30     |  |  |  if Customer_Age <= 49;\nn:   3   win:    0     |  |  if CLIENTNUM > 716984658;\nn:   7   win:   -2     |  if Avg_Utilization_Ratio > 0.161\nn:   4   win:    1     |  |  if Total_Trans_Amt <= 1820;\nn:   3   win:   -7     |  |  if Total_Trans_Amt > 1820;\nn:  13   win:  -15     if Total_Trans_Amt > 3806\nn:   8   win:  -11     |  if Total_Amt_Chng_Q4_Q1 <= 0.82\nn:   4   win:   -7     |  |  if Customer_Age > 49;\nn:   4   win:  -15     |  |  if Customer_Age <= 49;\nn:   5   win:  -22     |  if Total_Amt_Chng_Q4_Q1 > 0.82;\n\nUsed:  Customer_Age Total_Trans_Amt CLIENTNUM Total_Amt_Chng_Q4_Q1 Avg_Utilization_Ratio\nBest train: 68 hold-out: 21\n",
+      "features": [
+        "Customer_Age",
+        "Total_Trans_Amt",
+        "CLIENTNUM",
+        "Total_Amt_Chng_Q4_Q1",
+        "Avg_Utilization_Ratio"
+      ]
+    },
+    {
+      "run": 45,
+      "accuracy": 5,
+      "train_accuracy": 64,
+      "overfitting_gap": 59,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 64,
+      "stability": 44.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  14   win:   26     if Total_Trans_Ct <= 69\nn:   8   win:   37     |  if Total_Trans_Amt > 2383\nn:   4   win:   48     |  |  if Contacts_Count_12_mon <= 2;\nn:   4   win:   26     |  |  if Contacts_Count_12_mon > 2;\nn:   6   win:   11     |  if Total_Trans_Amt <= 2383;\nn:  16   win:    0     if Total_Trans_Ct > 69\nn:  12   win:    5     |  if Contacts_Count_12_mon > 1\nn:   7   win:   15     |  |  if Avg_Utilization_Ratio <= 0.365\nn:   3   win:   29     |  |  |  if Total_Trans_Amt > 4605;\nn:   4   win:    4     |  |  |  if Total_Trans_Amt <= 4605;\nn:   5   win:   -8     |  |  if Avg_Utilization_Ratio > 0.365;\nn:   4   win:  -20     |  if Contacts_Count_12_mon <= 1;\n\nUsed:  Contacts_Count_12_mon Total_Trans_Amt Total_Trans_Ct Avg_Utilization_Ratio\nBest train: 64 hold-out: 5\n",
+      "features": [
+        "Contacts_Count_12_mon",
+        "Total_Trans_Amt",
+        "Total_Trans_Ct",
+        "Avg_Utilization_Ratio"
+      ]
+    },
+    {
+      "run": 46,
+      "accuracy": 74,
+      "train_accuracy": 74,
+      "overfitting_gap": 0,
+      "complexity": 4,
+      "tree_depth": 5,
+      "coverage": 78,
+      "stability": 33.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:   4   win:   78     if Total_Trans_Ct > 86;\nn:  26   win:   10     if Total_Trans_Ct <= 86\nn:  15   win:   22     |  if Total_Trans_Ct <= 67\nn:   4   win:   61     |  |  if Total_Amt_Chng_Q4_Q1 > 0.771;\nn:  11   win:    8     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.771\nn:   6   win:   24     |  |  |  if Total_Trans_Ct > 45\nn:   3   win:   26     |  |  |  |  if income_Category == $80K - $120K;\nn:   3   win:   21     |  |  |  |  if income_Category != $80K - $120K;\nn:   5   win:   -9     |  |  |  if Total_Trans_Ct <= 45;\nn:  11   win:   -6     |  if Total_Trans_Ct > 67\nn:   7   win:    2     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.821\nn:   3   win:    9     |  |  |  if CLIENTNUM > 717722958;\nn:   4   win:   -3     |  |  |  if CLIENTNUM <= 717722958;\nn:   4   win:  -20     |  |  if Total_Amt_Chng_Q4_Q1 > 0.821;\n\nUsed:  Total_Trans_Ct Total_Amt_Chng_Q4_Q1 CLIENTNUM income_Category\nBest train: 74 hold-out: 74\n",
+      "features": [
+        "Total_Trans_Ct",
+        "Total_Amt_Chng_Q4_Q1",
+        "CLIENTNUM",
+        "income_Category"
+      ]
+    },
+    {
+      "run": 47,
+      "accuracy": 27,
+      "train_accuracy": 56,
+      "overfitting_gap": 29,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 67,
+      "stability": 52.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  21   win:   16     if Avg_Utilization_Ratio <= 0.429\nn:  12   win:   35     |  if Avg_Utilization_Ratio > 0\nn:   5   win:   67     |  |  if Avg_Utilization_Ratio <= 0.209;\nn:   7   win:   13     |  |  if Avg_Utilization_Ratio > 0.209\nn:   4   win:   18     |  |  |  if Customer_Age <= 48;\nn:   3   win:    6     |  |  |  if Customer_Age > 48;\nn:   9   win:   -9     |  if Avg_Utilization_Ratio <= 0\nn:   3   win:    4     |  |  if Total_Amt_Chng_Q4_Q1 > 0.785;\nn:   6   win:  -15     |  |  if Total_Amt_Chng_Q4_Q1 <= 0.785\nn:   3   win:  -15     |  |  |  if marital_Status != Married;\nn:   3   win:  -16     |  |  |  if marital_Status == Married;\nn:   9   win:    0     if Avg_Utilization_Ratio > 0.429\nn:   5   win:    2     |  if Avg_Utilization_Ratio > 0.541;\nn:   4   win:   -4     |  if Avg_Utilization_Ratio <= 0.541;\n\nUsed:  Avg_Utilization_Ratio Customer_Age marital_Status Total_Amt_Chng_Q4_Q1\nBest train: 56 hold-out: 27\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "Customer_Age",
+        "marital_Status",
+        "Total_Amt_Chng_Q4_Q1"
+      ]
+    },
+    {
+      "run": 48,
+      "accuracy": 74,
+      "train_accuracy": 69,
+      "overfitting_gap": -5,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 69,
+      "stability": 42.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  22   win:   21     if Avg_Utilization_Ratio > 0\nn:  13   win:   42     |  if Avg_Utilization_Ratio <= 0.133\nn:   8   win:   49     |  |  if Avg_Utilization_Ratio <= 0.071\nn:   3   win:   60     |  |  |  if Avg_Utilization_Ratio > 0.054;\nn:   5   win:   43     |  |  |  if Avg_Utilization_Ratio <= 0.054;\nn:   5   win:   31     |  |  if Avg_Utilization_Ratio > 0.071;\nn:   9   win:   -9     |  if Avg_Utilization_Ratio > 0.133\nn:   6   win:   -5     |  |  if Total_Relationship_Count <= 4\nn:   3   win:    0     |  |  |  if marital_Status != Married;\nn:   3   win:  -11     |  |  |  if marital_Status == Married;\nn:   3   win:  -17     |  |  if Total_Relationship_Count > 4;\nn:   8   win:  -18     if Avg_Utilization_Ratio <= 0\nn:   5   win:   -9     |  if Contacts_Count_12_mon <= 2;\nn:   3   win:  -35     |  if Contacts_Count_12_mon > 2;\n\nUsed:  Avg_Utilization_Ratio marital_Status Total_Relationship_Count Contacts_Count_12_mon\nBest train: 69 hold-out: 74\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "marital_Status",
+        "Total_Relationship_Count",
+        "Contacts_Count_12_mon"
+      ]
+    },
+    {
+      "run": 49,
+      "accuracy": 54,
+      "train_accuracy": 71,
+      "overfitting_gap": 17,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 97,
+      "stability": 44.5,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  18   win:   58     if Avg_Utilization_Ratio <= 0.079\nn:  11   win:   83     |  if Avg_Utilization_Ratio > 0\nn:   4   win:   97     |  |  if Avg_Utilization_Ratio > 0.054;\nn:   7   win:   75     |  |  if Avg_Utilization_Ratio <= 0.054\nn:   3   win:   84     |  |  |  if CLIENTNUM > 713761608;\nn:   4   win:   69     |  |  |  if CLIENTNUM <= 713761608;\nn:   7   win:   19     |  if Avg_Utilization_Ratio <= 0\nn:   4   win:   24     |  |  if Dependent_count <= 3;\nn:   3   win:   11     |  |  if Dependent_count > 3;\nn:  12   win:   16     if Avg_Utilization_Ratio > 0.079\nn:   6   win:   28     |  if Avg_Utilization_Ratio <= 0.182\nn:   3   win:   32     |  |  if gender == F;\nn:   3   win:   24     |  |  if gender != F;\nn:   6   win:    4     |  if Avg_Utilization_Ratio > 0.182;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM gender Dependent_count\nBest train: 71 hold-out: 54\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "gender",
+        "Dependent_count"
+      ]
+    },
+    {
+      "run": 50,
+      "accuracy": 45,
+      "train_accuracy": 81,
+      "overfitting_gap": 36,
+      "complexity": 6,
+      "tree_depth": 7,
+      "coverage": 81,
+      "stability": 29.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:   4   win:   50     if Total_Trans_Ct <= 30;\nn:  26   win:   -3     if Total_Trans_Ct > 30\nn:   3   win:   27     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 > 0.99556;\nn:  23   win:   -7     |  if Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1 <= 0.99556\nn:  20   win:   -5     |  |  if Customer_Age <= 56\nn:  17   win:   -3     |  |  |  if Months_Inactive_12_mon <= 3\nn:  12   win:    1     |  |  |  |  if CLIENTNUM <= 778606308\nn:   8   win:    4     |  |  |  |  |  if CLIENTNUM > 711968358\nn:   4   win:    8     |  |  |  |  |  |  if Total_Trans_Amt <= 3016;\nn:   4   win:    0     |  |  |  |  |  |  if Total_Trans_Amt > 3016;\nn:   4   win:   -4     |  |  |  |  |  if CLIENTNUM <= 711968358;\nn:   5   win:  -13     |  |  |  |  if CLIENTNUM > 778606308;\nn:   3   win:  -17     |  |  |  if Months_Inactive_12_mon > 3;\nn:   3   win:  -25     |  |  if Customer_Age > 56;\n\nUsed:  CLIENTNUM Customer_Age Months_Inactive_12_mon Total_Trans_Amt Total_Trans_Ct Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1\nBest train: 81 hold-out: 45\n",
+      "features": [
+        "CLIENTNUM",
+        "Customer_Age",
+        "Months_Inactive_12_mon",
+        "Total_Trans_Amt",
+        "Total_Trans_Ct",
+        "Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1"
+      ]
+    }
+  ]
+}

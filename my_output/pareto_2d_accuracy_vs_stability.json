@@ -1,0 +1,48 @@
+{
+  "frontier_size": 3,
+  "dimensions": "accuracy \u00d7 stability",
+  "knee_run": 24,
+  "trees": [
+    {
+      "run": 43,
+      "accuracy": 77,
+      "stability": 56.7,
+      "tree_complexity": 0.8333,
+      "features": [
+        "Learninrate",
+        "Vfcoef",
+        "Nsteps",
+        "Entcoef",
+        "Maxgrad_norm"
+      ],
+      "raw_output": "\nFile:\t A2C_Acrobot.csv\nRows:\t 223\nX:\t 10\nY:\t 3 EvalMeanReturn+ EvalVarReturn- ConvergenceTime-\n \nn:  23   win:   34     if Learninrate <= -2.374\nn:  15   win:   55     |  if Learninrate > -4.51\nn:  11   win:   68     |  |  if Vfcoef > 0.679\nn:   4   win:   78     |  |  |  if Vfcoef > 0.81;\nn:   7   win:   63     |  |  |  if Vfcoef <= 0.81\nn:   4   win:   83     |  |  |  |  if Entcoef <= 0.003;\nn:   3   win:   35     |  |  |  |  if Entcoef > 0.003;\nn:   4   win:   17     |  |  if Vfcoef <= 0.679;\nn:   8   win:   -5     |  if Learninrate <= -4.51\nn:   5   win:   13     |  |  if Nsteps <= 15;\nn:   3   win:  -37     |  |  if Nsteps > 15;\nn:   7   win:  -41     if Learninrate > -2.374\nn:   4   win:  -26     |  if Maxgrad_norm <= 4.366;\nn:   3   win:  -61     |  if Maxgrad_norm > 4.366;\n\nUsed:  Learninrate Vfcoef Nsteps Entcoef Maxgrad_norm\nBest train: 62 hold-out: 77\n",
+      "rank": 1
+    },
+    {
+      "run": 24,
+      "accuracy": 76,
+      "stability": 61.9,
+      "tree_complexity": 0.75,
+      "features": [
+        "Learninrate",
+        "Entcoef",
+        "Vfcoef"
+      ],
+      "raw_output": "\nFile:\t A2C_Acrobot.csv\nRows:\t 223\nX:\t 10\nY:\t 3 EvalMeanReturn+ EvalVarReturn- ConvergenceTime-\n \nn:  24   win:   34     if Learninrate <= -2.802\nn:  20   win:   46     |  if Learninrate > -4.51\nn:  16   win:   55     |  |  if Learninrate <= -3.347\nn:   3   win:   75     |  |  |  if Learninrate > -3.569;\nn:  13   win:   50     |  |  |  if Learninrate <= -3.569\nn:   8   win:   67     |  |  |  |  if Entcoef > 0.001\nn:   4   win:   86     |  |  |  |  |  if Vfcoef > 0.694;\nn:   4   win:   49     |  |  |  |  |  if Vfcoef <= 0.694;\nn:   5   win:   24     |  |  |  |  if Entcoef <= 0.001;\nn:   4   win:   11     |  |  if Learninrate > -3.347;\nn:   4   win:  -27     |  if Learninrate <= -4.51;\nn:   6   win:  -43     if Learninrate > -2.802;\n\nUsed:  Learninrate Entcoef Vfcoef\nBest train: 100 hold-out: 76\n",
+      "rank": 2
+    },
+    {
+      "run": 20,
+      "accuracy": 58,
+      "stability": 64.6,
+      "tree_complexity": 0.75,
+      "features": [
+        "Gamma",
+        "Maxgrad_norm",
+        "Learninrate"
+      ],
+      "raw_output": "\nFile:\t A2C_Acrobot.csv\nRows:\t 223\nX:\t 10\nY:\t 3 EvalMeanReturn+ EvalVarReturn- ConvergenceTime-\n \nn:   4   win:   64     if Maxgrad_norm > 3.932;\nn:  26   win:   13     if Maxgrad_norm <= 3.932\nn:  21   win:   19     |  if Learninrate > -4.643\nn:  14   win:   31     |  |  if Gamma <= 0.961\nn:   3   win:   72     |  |  |  if Gamma > 0.935;\nn:  11   win:   19     |  |  |  if Gamma <= 0.935\nn:   4   win:   39     |  |  |  |  if Gamma <= 0.906;\nn:   7   win:    8     |  |  |  |  if Gamma > 0.906\nn:   3   win:   22     |  |  |  |  |  if Gamma > 0.924;\nn:   4   win:   -1     |  |  |  |  |  if Gamma <= 0.924;\nn:   7   win:   -5     |  |  if Gamma > 0.961\nn:   4   win:    6     |  |  |  if Maxgrad_norm <= 2.705;\nn:   3   win:  -20     |  |  |  if Maxgrad_norm > 2.705;\nn:   5   win:   -9     |  if Learninrate <= -4.643;\n\nUsed:  Gamma Maxgrad_norm Learninrate\nBest train: 61 hold-out: 58\n",
+      "rank": 3
+    }
+  ]
+}

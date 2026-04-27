@@ -1,0 +1,50 @@
+run,accuracy,stability,tree_complexity,features,on_3d_frontier,on_accuracy_vs_stability_frontier,on_accuracy_vs_tree_complexity_frontier,on_stability_vs_tree_complexity_frontier
+1,27,56.3,0.75,"Learninrate, Gamma, Nsteps, Vfcoef, Maxgrad_norm",False,False,False,False
+2,47,61.2,0.5,"Gamma, Learninrate, Vfcoef",True,False,True,True
+3,58,57.1,0.5833,"Learninrate, Maxgrad_norm, Layer2Nodes",True,False,True,False
+4,17,51.0,0.75,"Learninrate, Layer2Nodes, Maxgrad_norm, Gaelambda",False,False,False,False
+5,44,60.7,0.6667,"Learninrate, Entcoef, Vfcoef, Maxgrad_norm",False,False,False,False
+6,45,56.5,0.5833,"Gaelambda, Learninrate, Vfcoef",False,False,False,False
+8,58,44.1,0.75,"Layer1Nodes, Learninrate, Vfcoef, Gaelambda, Layer2Nodes",False,False,False,False
+9,62,52.2,0.8333,"Maxgrad_norm, Learninrate, Nsteps, Entcoef, Layer2Nodes",False,False,False,False
+10,30,56.7,0.9167,"Vfcoef, Learninrate, Nsteps, Entcoef, Maxgrad_norm",False,False,False,False
+11,47,50.6,0.75,"Entcoef, Learninrate, Maxgrad_norm, Gaelambda, Layer2Nodes",False,False,False,False
+12,34,48.0,0.6667,"Gamma, Maxgrad_norm, Nsteps, Vfcoef",False,False,False,False
+13,51,51.0,0.6667,"Learninrate, Vfcoef, Maxgrad_norm, NumLayers",False,False,False,False
+14,44,58.7,0.75,"Learninrate, Gamma, Nsteps, Maxgrad_norm",False,False,False,False
+15,43,55.1,0.75,"Vfcoef, Learninrate, Entcoef, Maxgrad_norm, Gaelambda",False,False,False,False
+16,57,49.0,0.75,"Gamma, Learninrate, Nsteps, Maxgrad_norm, NumLayers",False,False,False,False
+17,57,42.0,0.8333,"Gamma, Entcoef, Vfcoef, Maxgrad_norm, NumLayers",False,False,False,False
+18,45,53.7,0.5833,"Learninrate, Vfcoef, Layer2Nodes",False,False,False,False
+19,58,56.1,0.6667,"Vfcoef, Gamma, Learninrate, Nsteps",False,False,False,False
+20,58,64.6,0.75,"Gamma, Maxgrad_norm, Learninrate",True,True,False,True
+21,45,42.9,0.75,"Nsteps, Vfcoef, Maxgrad_norm, Layer1Nodes",False,False,False,False
+22,61,53.9,0.8333,"Learninrate, Gamma, Entcoef, Maxgrad_norm, Layer1Nodes",False,False,False,False
+23,35,61.2,0.5833,"Vfcoef, Gamma, Learninrate",False,False,False,False
+24,76,61.9,0.75,"Learninrate, Entcoef, Vfcoef",True,True,False,False
+25,38,56.6,0.8333,"Learninrate, Gamma, Nsteps, Entcoef",False,False,False,False
+26,45,51.7,0.9167,"Gamma, Learninrate, Nsteps, Entcoef, Maxgrad_norm, Layer1Nodes",False,False,False,False
+27,53,39.3,0.6667,"Learninrate, Gaelambda, NumLayers, Layer2Nodes",False,False,False,False
+28,52,52.6,0.6667,"Gaelambda, Learninrate, Nsteps, Vfcoef",False,False,False,False
+29,62,46.3,0.9167,"Gamma, Learninrate, Nsteps, Entcoef, Layer1Nodes, Layer2Nodes",False,False,False,False
+30,21,54.4,0.6667,"Learninrate, Entcoef, Layer2Nodes",False,False,False,False
+31,3,53.1,0.75,"Gamma, Learninrate, Entcoef, Layer1Nodes",False,False,False,False
+32,61,53.1,0.75,"Gamma, Learninrate, Entcoef, Vfcoef, Gaelambda",False,False,False,False
+33,33,49.0,0.6667,"Learninrate, Gamma, Maxgrad_norm, Layer1Nodes, Layer2Nodes",False,False,False,False
+34,30,48.3,0.5833,"Gamma, Nsteps, Maxgrad_norm",False,False,False,False
+35,44,52.6,0.6667,"Layer2Nodes, Learninrate, Entcoef, Vfcoef",False,False,False,False
+36,47,47.4,0.6667,"Learninrate, Nsteps, Gaelambda, Layer1Nodes",False,False,False,False
+37,32,51.0,0.75,"Vfcoef, Learninrate, Maxgrad_norm, NumLayers",False,False,False,False
+38,2,56.5,0.5833,"Vfcoef, Gaelambda, Learninrate",False,False,False,False
+39,62,51.7,1.0,"Gamma, Learninrate, Nsteps, Entcoef, Maxgrad_norm, Layer1Nodes",False,False,False,False
+40,56,55.1,0.8333,"Learninrate, Gamma, Entcoef, Maxgrad_norm, Gaelambda",False,False,False,False
+41,62,59.2,0.75,"Learninrate, Nsteps, Entcoef, Maxgrad_norm",False,False,False,False
+42,47,38.8,0.6667,"Entcoef, Gamma, Gaelambda, Layer1Nodes",False,False,False,False
+43,77,56.7,0.8333,"Learninrate, Vfcoef, Nsteps, Entcoef, Maxgrad_norm",True,True,True,False
+44,46,50.3,0.9167,"Gaelambda, Gamma, Learninrate, Entcoef, Maxgrad_norm, Layer1Nodes",False,False,False,False
+45,56,57.1,0.6667,"Learninrate, Gaelambda, Entcoef",False,False,False,False
+46,76,52.6,0.6667,"Learninrate, Entcoef, Gamma, Layer2Nodes",True,False,True,False
+47,41,53.9,0.8333,"Learninrate, Gamma, Entcoef, Maxgrad_norm, Layer1Nodes",False,False,False,False
+48,61,58.7,0.6667,"Nsteps, Learninrate, Vfcoef, Maxgrad_norm",True,False,False,False
+49,40,52.6,0.75,"Learninrate, Gaelambda, Nsteps, Vfcoef",False,False,False,False
+50,24,49.4,0.8333,"Learninrate, Nsteps, Maxgrad_norm, Gaelambda, Layer1Nodes",False,False,False,False

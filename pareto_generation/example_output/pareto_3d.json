@@ -1,0 +1,60 @@
+{
+  "frontier_size": 3,
+  "dimensions": "3d",
+  "trees": [
+    {
+      "run": 8,
+      "accuracy": 75,
+      "train_accuracy": 68,
+      "overfitting_gap": -7,
+      "complexity": 5,
+      "tree_depth": 5,
+      "coverage": 93,
+      "stability": 50.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  19   win:   47     if Avg_Utilization_Ratio <= 0.185\nn:  14   win:   68     |  if Avg_Utilization_Ratio > 0\nn:  11   win:   78     |  |  if Avg_Utilization_Ratio <= 0.101\nn:   4   win:   93     |  |  |  if Total_Trans_Amt <= 1843;\nn:   7   win:   69     |  |  |  if Total_Trans_Amt > 1843\nn:   4   win:   78     |  |  |  |  if CLIENTNUM <= 715957233;\nn:   3   win:   58     |  |  |  |  if CLIENTNUM > 715957233;\nn:   3   win:   32     |  |  if Avg_Utilization_Ratio > 0.101;\nn:   5   win:   -9     |  if Avg_Utilization_Ratio <= 0;\nn:  11   win:    2     if Avg_Utilization_Ratio > 0.185\nn:   7   win:    8     |  if Total_Amt_Chng_Q4_Q1 > 0.715\nn:   4   win:   12     |  |  if Total_Trans_Ct <= 70;\nn:   3   win:    3     |  |  if Total_Trans_Ct > 70;\nn:   4   win:   -9     |  if Total_Amt_Chng_Q4_Q1 <= 0.715;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM Total_Amt_Chng_Q4_Q1 Total_Trans_Amt Total_Trans_Ct\nBest train: 68 hold-out: 75\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "Total_Amt_Chng_Q4_Q1",
+        "Total_Trans_Amt",
+        "Total_Trans_Ct"
+      ],
+      "rank": 1
+    },
+    {
+      "run": 48,
+      "accuracy": 74,
+      "train_accuracy": 69,
+      "overfitting_gap": -5,
+      "complexity": 4,
+      "tree_depth": 4,
+      "coverage": 69,
+      "stability": 42.0,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  22   win:   21     if Avg_Utilization_Ratio > 0\nn:  13   win:   42     |  if Avg_Utilization_Ratio <= 0.133\nn:   8   win:   49     |  |  if Avg_Utilization_Ratio <= 0.071\nn:   3   win:   60     |  |  |  if Avg_Utilization_Ratio > 0.054;\nn:   5   win:   43     |  |  |  if Avg_Utilization_Ratio <= 0.054;\nn:   5   win:   31     |  |  if Avg_Utilization_Ratio > 0.071;\nn:   9   win:   -9     |  if Avg_Utilization_Ratio > 0.133\nn:   6   win:   -5     |  |  if Total_Relationship_Count <= 4\nn:   3   win:    0     |  |  |  if marital_Status != Married;\nn:   3   win:  -11     |  |  |  if marital_Status == Married;\nn:   3   win:  -17     |  |  if Total_Relationship_Count > 4;\nn:   8   win:  -18     if Avg_Utilization_Ratio <= 0\nn:   5   win:   -9     |  if Contacts_Count_12_mon <= 2;\nn:   3   win:  -35     |  if Contacts_Count_12_mon > 2;\n\nUsed:  Avg_Utilization_Ratio marital_Status Total_Relationship_Count Contacts_Count_12_mon\nBest train: 69 hold-out: 74\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "marital_Status",
+        "Total_Relationship_Count",
+        "Contacts_Count_12_mon"
+      ],
+      "rank": 2
+    },
+    {
+      "run": 20,
+      "accuracy": 71,
+      "train_accuracy": 47,
+      "overfitting_gap": -24,
+      "complexity": 3,
+      "tree_depth": 4,
+      "coverage": 63,
+      "stability": 57.3,
+      "raw_output": "\nFile:\t /Users/hmestes/gits/moot/optimize/financial_data/BankChurners.csv\nRows:\t 10127\nX:\t 19\nY:\t 4 Credit_Limit+ Total_Revolving_Bal+ Avg_Open_To_Buy+ Total_Ct_Chng_Q4_Q1+\n \nn:  15   win:   27     if Avg_Utilization_Ratio <= 0.326\nn:  10   win:   43     |  if Avg_Utilization_Ratio > 0\nn:   6   win:   53     |  |  if Avg_Utilization_Ratio <= 0.18\nn:   3   win:   63     |  |  |  if marital_Status != Single;\nn:   3   win:   44     |  |  |  if marital_Status == Single;\nn:   4   win:   27     |  |  if Avg_Utilization_Ratio > 0.18;\nn:   5   win:   -3     |  if Avg_Utilization_Ratio <= 0;\nn:  15   win:   -2     if Avg_Utilization_Ratio > 0.326\nn:  10   win:    2     |  if CLIENTNUM > 710770383\nn:   5   win:   10     |  |  if Avg_Utilization_Ratio <= 0.511;\nn:   5   win:   -6     |  |  if Avg_Utilization_Ratio > 0.511;\nn:   5   win:  -11     |  if CLIENTNUM <= 710770383;\n\nUsed:  Avg_Utilization_Ratio CLIENTNUM marital_Status\nBest train: 47 hold-out: 71\n",
+      "features": [
+        "Avg_Utilization_Ratio",
+        "CLIENTNUM",
+        "marital_Status"
+      ],
+      "rank": 3
+    }
+  ]
+}

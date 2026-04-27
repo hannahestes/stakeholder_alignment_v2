@@ -1,0 +1,51 @@
+run,accuracy,train_accuracy,overfitting_gap,complexity,tree_depth,coverage,stability,features,on_2d_frontier,on_3d_frontier
+1,65,68,3,3,4,68,57.3,"Avg_Utilization_Ratio, CLIENTNUM, marital_Status",False,False
+2,50,64,14,5,4,64,42.8,"Avg_Utilization_Ratio, CLIENTNUM, education_Level, Total_Trans_Amt, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+3,63,67,4,6,5,104,37.3,"education_Level, Months_on_book, CLIENTNUM, gender, Total_Trans_Amt, Avg_Utilization_Ratio",False,False
+4,56,73,17,6,4,73,46.0,"CLIENTNUM, Customer_Age, Total_Amt_Chng_Q4_Q1, Total_Trans_Ct, Avg_Utilization_Ratio, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+5,71,58,-13,5,4,58,43.6,"Customer_Age, Avg_Utilization_Ratio, education_Level, Contacts_Count_12_mon, Total_Amt_Chng_Q4_Q1",False,False
+6,40,60,20,6,4,60,38.0,"Avg_Utilization_Ratio, Customer_Age, marital_Status, Total_Relationship_Count, Total_Trans_Ct, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+7,43,68,25,5,5,68,39.2,"Total_Amt_Chng_Q4_Q1, Avg_Utilization_Ratio, attrition_Flag, marital_Status, Contacts_Count_12_mon",False,False
+8,75,68,-7,5,5,93,50.0,"Avg_Utilization_Ratio, CLIENTNUM, Total_Amt_Chng_Q4_Q1, Total_Trans_Amt, Total_Trans_Ct",True,True
+9,69,70,1,5,5,92,40.0,"Avg_Utilization_Ratio, CLIENTNUM, income_Category, Total_Trans_Ct, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+10,64,70,6,5,4,106,38.0,"Avg_Utilization_Ratio, Customer_Age, gender, Dependent_count, Contacts_Count_12_mon",False,False
+11,55,74,19,5,5,103,39.6,"Avg_Utilization_Ratio, Customer_Age, gender, Months_on_book, Total_Trans_Amt",False,False
+12,73,71,-2,5,4,71,45.6,"Avg_Utilization_Ratio, Customer_Age, Months_on_book, Total_Amt_Chng_Q4_Q1, Total_Trans_Amt",False,False
+13,64,70,6,6,5,93,38.3,"Avg_Utilization_Ratio, Customer_Age, education_Level, marital_Status, Months_Inactive_12_mon, Total_Amt_Chng_Q4_Q1",False,False
+14,58,60,2,5,4,60,40.8,"Avg_Utilization_Ratio, Customer_Age, Dependent_count, Total_Trans_Amt, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+15,45,55,10,5,4,55,34.0,"Avg_Utilization_Ratio, Customer_Age, education_Level, income_Category, Months_on_book",False,False
+16,67,60,-7,4,4,84,45.5,"Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2, Avg_Utilization_Ratio, gender, Total_Amt_Chng_Q4_Q1",False,False
+17,11,63,52,6,4,83,27.3,"Total_Amt_Chng_Q4_Q1, education_Level, Total_Relationship_Count, Contacts_Count_12_mon, Total_Trans_Amt, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+18,53,60,7,5,4,65,48.4,"Avg_Utilization_Ratio, CLIENTNUM, marital_Status, Total_Amt_Chng_Q4_Q1, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+19,47,67,20,4,4,76,52.0,"CLIENTNUM, Dependent_count, Total_Amt_Chng_Q4_Q1, Avg_Utilization_Ratio",False,False
+20,71,47,-24,3,4,63,57.3,"Avg_Utilization_Ratio, CLIENTNUM, marital_Status",True,True
+21,58,66,8,6,4,86,41.3,"CLIENTNUM, Avg_Utilization_Ratio, Customer_Age, Dependent_count, marital_Status, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+22,66,70,4,5,4,90,39.6,"Avg_Utilization_Ratio, gender, Dependent_count, Total_Relationship_Count, Total_Amt_Chng_Q4_Q1",False,False
+23,57,73,16,7,4,82,39.7,"Avg_Utilization_Ratio, CLIENTNUM, Customer_Age, marital_Status, Total_Relationship_Count, Contacts_Count_12_mon, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+24,64,58,-6,4,4,70,50.0,"CLIENTNUM, Avg_Utilization_Ratio, Total_Trans_Amt, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+25,63,68,5,4,4,104,44.0,"Avg_Utilization_Ratio, CLIENTNUM, income_Category, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+26,68,44,-24,5,4,49,34.4,"Months_on_book, Avg_Utilization_Ratio, Dependent_count, Contacts_Count_12_mon, Total_Trans_Ct",False,False
+27,64,65,1,4,4,65,46.5,"Avg_Utilization_Ratio, Total_Amt_Chng_Q4_Q1, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+28,29,63,34,5,4,63,47.2,"Customer_Age, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1, Total_Amt_Chng_Q4_Q1, Total_Trans_Amt, Avg_Utilization_Ratio",False,False
+29,60,42,-18,7,4,50,40.0,"Avg_Utilization_Ratio, CLIENTNUM, education_Level, marital_Status, Total_Relationship_Count, Contacts_Count_12_mon, Total_Amt_Chng_Q4_Q1",False,False
+30,50,73,23,5,4,80,47.6,"CLIENTNUM, Avg_Utilization_Ratio, Total_Amt_Chng_Q4_Q1, Total_Trans_Ct, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+31,69,69,0,4,4,83,43.0,"Avg_Utilization_Ratio, Total_Relationship_Count, Total_Trans_Amt, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+32,28,63,35,5,5,63,52.8,"Avg_Utilization_Ratio, CLIENTNUM, Customer_Age, Total_Amt_Chng_Q4_Q1, Total_Trans_Amt",False,False
+33,66,68,2,7,4,106,33.4,"card_Category, Months_Inactive_12_mon, Contacts_Count_12_mon, Total_Amt_Chng_Q4_Q1, Total_Trans_Amt, Total_Trans_Ct, Avg_Utilization_Ratio",False,False
+34,40,55,15,5,4,55,44.8,"Total_Trans_Amt, Avg_Utilization_Ratio, Contacts_Count_12_mon, Total_Amt_Chng_Q4_Q1, Total_Trans_Ct",False,False
+35,42,68,26,4,4,82,51.0,"Avg_Utilization_Ratio, CLIENTNUM, Customer_Age, Total_Relationship_Count",False,False
+36,52,73,21,5,4,73,39.6,"Months_on_book, Avg_Utilization_Ratio, CLIENTNUM, gender, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+37,64,59,-5,5,4,65,44.4,"Avg_Utilization_Ratio, Customer_Age, gender, Contacts_Count_12_mon, Total_Amt_Chng_Q4_Q1",False,False
+38,71,71,0,4,4,71,46.5,"Avg_Utilization_Ratio, Total_Relationship_Count, Total_Amt_Chng_Q4_Q1, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False
+39,60,66,6,5,4,72,38.8,"Avg_Utilization_Ratio, CLIENTNUM, gender, income_Category, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+40,62,70,8,5,4,103,41.6,"Avg_Utilization_Ratio, Dependent_count, marital_Status, Total_Relationship_Count, Total_Amt_Chng_Q4_Q1",False,False
+41,61,56,-5,6,4,71,36.0,"Total_Relationship_Count, CLIENTNUM, marital_Status, Months_on_book, Months_Inactive_12_mon, Avg_Utilization_Ratio",False,False
+42,60,67,7,4,4,79,48.5,"Avg_Utilization_Ratio, CLIENTNUM, marital_Status, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2",False,False
+43,21,59,38,4,5,59,47.5,"Avg_Utilization_Ratio, Total_Trans_Ct, Customer_Age, Total_Trans_Amt",False,False
+44,21,68,47,5,4,68,52.8,"Customer_Age, Total_Trans_Amt, CLIENTNUM, Total_Amt_Chng_Q4_Q1, Avg_Utilization_Ratio",False,False
+45,5,64,59,4,4,64,44.0,"Contacts_Count_12_mon, Total_Trans_Amt, Total_Trans_Ct, Avg_Utilization_Ratio",False,False
+46,74,74,0,4,5,78,33.0,"Total_Trans_Ct, Total_Amt_Chng_Q4_Q1, CLIENTNUM, income_Category",True,False
+47,27,56,29,4,4,67,52.0,"Avg_Utilization_Ratio, Customer_Age, marital_Status, Total_Amt_Chng_Q4_Q1",False,False
+48,74,69,-5,4,4,69,42.0,"Avg_Utilization_Ratio, marital_Status, Total_Relationship_Count, Contacts_Count_12_mon",True,True
+49,54,71,17,4,4,97,44.5,"Avg_Utilization_Ratio, CLIENTNUM, gender, Dependent_count",False,False
+50,45,81,36,6,7,81,29.3,"CLIENTNUM, Customer_Age, Months_Inactive_12_mon, Total_Trans_Amt, Total_Trans_Ct, Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1",False,False

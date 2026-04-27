@@ -1,0 +1,11 @@
+feature,occurrences,frequency_%
+Learninrate,44,89.8
+Maxgrad_norm,28,57.1
+Entcoef,24,49.0
+Gamma,23,46.9
+Vfcoef,23,46.9
+Nsteps,20,40.8
+Gaelambda,16,32.7
+Layer1Nodes,13,26.5
+Layer2Nodes,12,24.5
+NumLayers,5,10.2
